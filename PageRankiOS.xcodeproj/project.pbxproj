@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495853F8C677A7B4EFECCC37 /* Pods_PageRankiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBB19230E734512FD96FE4B /* Pods_PageRankiOS.framework */; };
 		753031CF1E8C3C3200984745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031CE1E8C3C3200984745 /* AppDelegate.swift */; };
 		753031D11E8C3C3200984745 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031D01E8C3C3200984745 /* ViewController.swift */; };
 		753031D41E8C3C3200984745 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753031D21E8C3C3200984745 /* Main.storyboard */; };
 		753031D61E8C3C3200984745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 753031D51E8C3C3200984745 /* Assets.xcassets */; };
 		753031D91E8C3C3200984745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753031D71E8C3C3200984745 /* LaunchScreen.storyboard */; };
+		753031E11E8C459B00984745 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031E01E8C459B00984745 /* Page.swift */; };
+		753031E31E8C519000984745 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031E21E8C519000984745 /* Graph.swift */; };
+		753031E51E8C55BC00984745 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031E41E8C55BC00984745 /* Constants.swift */; };
+		753031E71E8C593200984745 /* NetMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031E61E8C593200984745 /* NetMgr.swift */; };
+		753031E91E8C619F00984745 /* PRMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031E81E8C619F00984745 /* PRMgr.swift */; };
+		753031EB1E8C87A000984745 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031EA1E8C87A000984745 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		007AFCA94F173301BC1AAD6E /* Pods-PageRankiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageRankiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageRankiOS/Pods-PageRankiOS.release.xcconfig"; sourceTree = "<group>"; };
 		753031CB1E8C3C3200984745 /* PageRankiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageRankiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		753031CE1E8C3C3200984745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		753031D01E8C3C3200984745 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,14 @@
 		753031D51E8C3C3200984745 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		753031D81E8C3C3200984745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		753031DA1E8C3C3200984745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		753031E01E8C459B00984745 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		753031E21E8C519000984745 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		753031E41E8C55BC00984745 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		753031E61E8C593200984745 /* NetMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetMgr.swift; sourceTree = "<group>"; };
+		753031E81E8C619F00984745 /* PRMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRMgr.swift; sourceTree = "<group>"; };
+		753031EA1E8C87A000984745 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		AFBB19230E734512FD96FE4B /* Pods_PageRankiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageRankiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3C76ABCBFD8FD3AA01495B /* Pods-PageRankiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageRankiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PageRankiOS/Pods-PageRankiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495853F8C677A7B4EFECCC37 /* Pods_PageRankiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E40E25983B1A019377CCDE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB19230E734512FD96FE4B /* Pods_PageRankiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6700EA6E2E3F07CEA63BB27C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF3C76ABCBFD8FD3AA01495B /* Pods-PageRankiOS.debug.xcconfig */,
+				007AFCA94F173301BC1AAD6E /* Pods-PageRankiOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		753031C21E8C3C3200984745 = {
 			isa = PBXGroup;
 			children = (
 				753031CD1E8C3C3200984745 /* PageRankiOS */,
 				753031CC1E8C3C3200984745 /* Products */,
+				6700EA6E2E3F07CEA63BB27C /* Pods */,
+				5E40E25983B1A019377CCDE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +92,16 @@
 			children = (
 				753031CE1E8C3C3200984745 /* AppDelegate.swift */,
 				753031D01E8C3C3200984745 /* ViewController.swift */,
+				753031EA1E8C87A000984745 /* CustomTableViewCell.swift */,
 				753031D21E8C3C3200984745 /* Main.storyboard */,
 				753031D51E8C3C3200984745 /* Assets.xcassets */,
 				753031D71E8C3C3200984745 /* LaunchScreen.storyboard */,
 				753031DA1E8C3C3200984745 /* Info.plist */,
+				753031E01E8C459B00984745 /* Page.swift */,
+				753031E21E8C519000984745 /* Graph.swift */,
+				753031E41E8C55BC00984745 /* Constants.swift */,
+				753031E61E8C593200984745 /* NetMgr.swift */,
+				753031E81E8C619F00984745 /* PRMgr.swift */,
 			);
 			path = PageRankiOS;
 			sourceTree = "<group>";
@@ -71,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 753031DD1E8C3C3200984745 /* Build configuration list for PBXNativeTarget "PageRankiOS" */;
 			buildPhases = (
+				85A2642CDF47C856EEA5B3E4 /* [CP] Check Pods Manifest.lock */,
 				753031C71E8C3C3200984745 /* Sources */,
 				753031C81E8C3C3200984745 /* Frameworks */,
 				753031C91E8C3C3200984745 /* Resources */,
+				423E04C1BDDE6CDEFF45E35D /* [CP] Embed Pods Frameworks */,
+				FEAC239A23B7AAE3DB087685 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +176,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		423E04C1BDDE6CDEFF45E35D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PageRankiOS/Pods-PageRankiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85A2642CDF47C856EEA5B3E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FEAC239A23B7AAE3DB087685 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PageRankiOS/Pods-PageRankiOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		753031C71E8C3C3200984745 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753031E71E8C593200984745 /* NetMgr.swift in Sources */,
+				753031E51E8C55BC00984745 /* Constants.swift in Sources */,
+				753031EB1E8C87A000984745 /* CustomTableViewCell.swift in Sources */,
+				753031E31E8C519000984745 /* Graph.swift in Sources */,
+				753031E11E8C459B00984745 /* Page.swift in Sources */,
+				753031E91E8C619F00984745 /* PRMgr.swift in Sources */,
 				753031D11E8C3C3200984745 /* ViewController.swift in Sources */,
 				753031CF1E8C3C3200984745 /* AppDelegate.swift in Sources */,
 			);
@@ -258,6 +357,7 @@
 		};
 		753031DE1E8C3C3200984745 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF3C76ABCBFD8FD3AA01495B /* Pods-PageRankiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PageRankiOS/Info.plist;
@@ -270,6 +370,7 @@
 		};
 		753031DF1E8C3C3200984745 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007AFCA94F173301BC1AAD6E /* Pods-PageRankiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PageRankiOS/Info.plist;
@@ -299,6 +400,7 @@
 				753031DF1E8C3C3200984745 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
