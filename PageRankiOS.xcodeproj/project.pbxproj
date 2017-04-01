@@ -90,20 +90,36 @@
 		753031CD1E8C3C3200984745 /* PageRankiOS */ = {
 			isa = PBXGroup;
 			children = (
+				759CD0591E8FECD100A73835 /* View */,
+				759CD0581E8FECA600A73835 /* Models */,
 				753031CE1E8C3C3200984745 /* AppDelegate.swift */,
 				753031D01E8C3C3200984745 /* ViewController.swift */,
+				753031E61E8C593200984745 /* NetMgr.swift */,
+				753031E81E8C619F00984745 /* PRMgr.swift */,
+				753031E41E8C55BC00984745 /* Constants.swift */,
+				753031DA1E8C3C3200984745 /* Info.plist */,
+			);
+			path = PageRankiOS;
+			sourceTree = "<group>";
+		};
+		759CD0581E8FECA600A73835 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				753031E01E8C459B00984745 /* Page.swift */,
+				753031E21E8C519000984745 /* Graph.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		759CD0591E8FECD100A73835 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				753031EA1E8C87A000984745 /* CustomTableViewCell.swift */,
 				753031D21E8C3C3200984745 /* Main.storyboard */,
 				753031D51E8C3C3200984745 /* Assets.xcassets */,
 				753031D71E8C3C3200984745 /* LaunchScreen.storyboard */,
-				753031DA1E8C3C3200984745 /* Info.plist */,
-				753031E01E8C459B00984745 /* Page.swift */,
-				753031E21E8C519000984745 /* Graph.swift */,
-				753031E41E8C55BC00984745 /* Constants.swift */,
-				753031E61E8C593200984745 /* NetMgr.swift */,
-				753031E81E8C619F00984745 /* PRMgr.swift */,
 			);
-			path = PageRankiOS;
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

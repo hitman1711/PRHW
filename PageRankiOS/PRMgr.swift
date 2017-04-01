@@ -12,11 +12,9 @@ final class PRMgr {
     static let shared: PRMgr = PRMgr()
     private init() {}
     let graph = Graph.shared
-    var results: [Page]?
-    var viewController: ViewController?
     
-    func mainTask() {
-        fillFrom(link: baseURL)
+    func startJobs(url: String, completion: @escaping ([Page]) -> ()) {
+        fillFrom(link: url)
         while true {
             guard let pageLink = graph.pageForDownload()?.link else {
                 break
@@ -25,7 +23,11 @@ final class PRMgr {
                 fillFrom(link: pageLink)
             }
         }
-        performPRTasks()
+        performPRTasks {_ in
+            var pages = Array(self.graph.pages.values)
+            pages.sort(by: >)
+            completion(pages)
+        }
     }
     
     func fillFrom(link: String) {
@@ -38,7 +40,7 @@ final class PRMgr {
         }
     }
     
-    func performPRTasks() {
+    func performPRTasks(completion: @escaping (Bool) -> ()) {
         var columns = [[Bool]]()
         var keys = [String]()
         
@@ -57,7 +59,8 @@ final class PRMgr {
         parallelLessIterationPR()
         parallelLessPR()
         parallelExPR()
-        reloadData()
+        completion(true)
+//        reloadData()
     }
     
     
@@ -143,16 +146,6 @@ final class PRMgr {
             if let pr = page.nextPR {
                 page.pageRank = pr
             }
-        }
-    }
-    
-    func reloadData() {
-        var pages = Array(graph.pages.values)
-        pages.sort(by: >)
-        DispatchQueue.main.async {
-            self.results = pages
-            self.viewController?.results = pages
-            self.viewController?.tableView.reloadData()
         }
     }
     
