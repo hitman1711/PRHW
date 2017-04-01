@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var results = [Page]()
@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
         
         prMgr.viewController = self
         DispatchQueue.global().async {
@@ -30,17 +31,19 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
 
-        cell.linkLabel.text = results[indexPath.row].link
-        cell.rankLabel.text = "\(results[indexPath.row].pageRank)"
+        cell.linkLabel.text = "URL: \(results[indexPath.row].link)"
+        cell.rankLabel.text = "Rank: \(results[indexPath.row].pageRank)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 74
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
