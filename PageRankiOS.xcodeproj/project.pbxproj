@@ -160,6 +160,7 @@
 				TargetAttributes = {
 					753031CA1E8C3C3200984745 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 24Q556TG24;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -380,6 +381,7 @@
 			baseConfigurationReference = CF3C76ABCBFD8FD3AA01495B /* Pods-PageRankiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 24Q556TG24;
 				INFOPLIST_FILE = PageRankiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = theArthur.PageRankiOS;
@@ -393,6 +395,7 @@
 			baseConfigurationReference = 007AFCA94F173301BC1AAD6E /* Pods-PageRankiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 24Q556TG24;
 				INFOPLIST_FILE = PageRankiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = theArthur.PageRankiOS;

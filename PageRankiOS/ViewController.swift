@@ -26,12 +26,19 @@ final class ViewController: UIViewController, UITableViewDataSource, UITableView
         self.setLoadingScreen()
         
         DispatchQueue.global().async {
-            self.prMgr.startJobs(url: baseURL, completion: { (pages: [Page]) in
+            self.prMgr.startJobs(url: baseURL, completion: { (pages: [Page], times: [Double]) in
                 DispatchQueue.main.async {
                     self.results = pages
                     self.tableView.reloadData()
                     self.tableView.separatorStyle = .singleLine
                     self.removeLoadingScreen()
+                    
+                    var msg = "ParallelLessIterationPR: \(times[0])\n"
+                    msg.append("ParallelLessPR: \(times[1])\n")
+                    msg.append("ParallelExPR: \(times[2])")
+                    let alert = UIAlertController(title: "Готово", message: msg, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Закрыть", style: .default, handler: nil))
+                    self.present(alert, animated: true)
                 }
             })
         }

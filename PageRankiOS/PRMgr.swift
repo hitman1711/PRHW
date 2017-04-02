@@ -13,7 +13,7 @@ final class PRMgr {
     private init() {}
     let graph = Graph.shared
     
-    func startJobs(url: String, completion: @escaping ([Page]) -> ()) {
+    func startJobs(url: String, completion: @escaping ([Page], [Double]) -> ()) {
         fillFrom(link: url)
         while true {
             guard let pageLink = graph.pageForDownload()?.link else {
@@ -23,10 +23,10 @@ final class PRMgr {
                 fillFrom(link: pageLink)
             }
         }
-        performPRTasks {_ in
+        performPRTasks { times in
             var pages = Array(self.graph.pages.values)
             pages.sort(by: >)
-            completion(pages)
+            completion(pages, times)
         }
     }
     
@@ -40,7 +40,7 @@ final class PRMgr {
         }
     }
     
-    func performPRTasks(completion: @escaping (Bool) -> ()) {
+    func performPRTasks(completion: @escaping ([Double]) -> ()) {
         var columns = [[Bool]]()
         var keys = [String]()
         
@@ -56,36 +56,42 @@ final class PRMgr {
             columns.append(row)
         }
         
-        parallelLessIterationPR()
-        parallelLessPR()
-        parallelExPR()
-        completion(true)
+        let parallelLessIterTime = parallelLessIterationPR()
+        let parallelLessTime = parallelLessPR()
+        let parallelExTime = parallelExPR()
+        completion([parallelLessIterTime, parallelLessTime, parallelExTime])
 //        reloadData()
     }
     
     
-    func parallelLessIterationPR() {
+    func parallelLessIterationPR() -> Double {
         startPR()
         let before = Date().timeIntervalSince1970
         calculatePR()
         let after = Date().timeIntervalSince1970
-        print("ParallelLessIterationPR: \(after-before)")
+        let result = after-before
+        print("ParallelLessIterationPR: \(result)")
+        return result
     }
     
-    func parallelLessPR() {
+    func parallelLessPR() -> Double {
         startPR()
         let before = Date().timeIntervalSince1970
         calculateExPR()
         let after = Date().timeIntervalSince1970
-        print("ParallelLessPR: \(after-before)")
+        let result = after-before
+        print("ParallelLessPR: \(result)")
+        return result
     }
     
-    func parallelExPR() {
+    func parallelExPR() -> Double {
         startPR()
         let before = Date().timeIntervalSince1970
         calculateParallelExPR()
         let after = Date().timeIntervalSince1970
-        print("ParallelExPR: \(after-before)")
+        let result = after-before
+        print("ParallelExPR: \(result)")
+        return result
     }
     
     
