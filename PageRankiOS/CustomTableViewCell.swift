@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+final class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var rankLabel: UILabel!
 

@@ -9,7 +9,7 @@
 import Foundation
 import HTMLReader
 
-class NetMgr {
+final class NetMgr {
     class func performTask(urlStr: String) -> [String] {
         var result = [String]()
         autoreleasepool {

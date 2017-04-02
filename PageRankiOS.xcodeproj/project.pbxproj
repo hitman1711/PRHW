@@ -19,6 +19,7 @@
 		753031E71E8C593200984745 /* NetMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031E61E8C593200984745 /* NetMgr.swift */; };
 		753031E91E8C619F00984745 /* PRMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031E81E8C619F00984745 /* PRMgr.swift */; };
 		753031EB1E8C87A000984745 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031EA1E8C87A000984745 /* CustomTableViewCell.swift */; };
+		753AF1BC1E917EC800F97394 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AF1BB1E917EC800F97394 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		753031E61E8C593200984745 /* NetMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetMgr.swift; sourceTree = "<group>"; };
 		753031E81E8C619F00984745 /* PRMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRMgr.swift; sourceTree = "<group>"; };
 		753031EA1E8C87A000984745 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		753AF1BB1E917EC800F97394 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		AFBB19230E734512FD96FE4B /* Pods_PageRankiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageRankiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3C76ABCBFD8FD3AA01495B /* Pods-PageRankiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageRankiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PageRankiOS/Pods-PageRankiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				759CD0581E8FECA600A73835 /* Models */,
 				753031CE1E8C3C3200984745 /* AppDelegate.swift */,
 				753031D01E8C3C3200984745 /* ViewController.swift */,
+				753AF1BB1E917EC800F97394 /* PageViewController.swift */,
 				753031E61E8C593200984745 /* NetMgr.swift */,
 				753031E81E8C619F00984745 /* PRMgr.swift */,
 				753031E41E8C55BC00984745 /* Constants.swift */,
@@ -251,6 +254,7 @@
 				753031E31E8C519000984745 /* Graph.swift in Sources */,
 				753031E11E8C459B00984745 /* Page.swift in Sources */,
 				753031E91E8C619F00984745 /* PRMgr.swift in Sources */,
+				753AF1BC1E917EC800F97394 /* PageViewController.swift in Sources */,
 				753031D11E8C3C3200984745 /* ViewController.swift in Sources */,
 				753031CF1E8C3C3200984745 /* AppDelegate.swift in Sources */,
 			);
